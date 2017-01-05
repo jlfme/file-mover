@@ -32,10 +32,7 @@ class FileMover(object):
                 src_path = os.path.join(os.path.abspath(dir_path), filename)
                 dst_path = os.path.join(dst, filename)
                 if allowed_file(filename, allowed_types):
-                    print(filename)
                     self.move_file(src_path, dst_path)
-                else:
-                    print('dd', filename)
 
     def move_file(self, src, dst):
         """ 将指定路径文件移动到目标路径, 如果文件名已经存在, 则根据文件名创建新的路径
